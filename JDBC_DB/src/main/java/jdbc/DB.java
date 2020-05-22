@@ -38,6 +38,11 @@ public class DB {
 		}
 	}
 
+	public void custDel(int CID) throws SQLException {
+		String delete = "DELETE FROM customer WHERE CID = " + CID;
+		stmt.executeUpdate(delete);
+	}
+
 	public void prodCreate(int PID, String breed, String name, String gender, int age, float price)
 			throws SQLException {
 		stmt = conn.createStatement();
@@ -57,6 +62,11 @@ public class DB {
 		}
 	}
 
+	public void prodDel(int PID) throws SQLException {
+		String delete = "DELETE FROM pets WHERE PID = " + PID;
+		stmt.executeUpdate(delete);
+	}
+
 	public void ordrCreate(int OID, int CID, int quantity, int PID) throws SQLException {
 		stmt = conn.createStatement();
 		stmt.executeUpdate(
@@ -73,6 +83,11 @@ public class DB {
 			System.out.println(orders);
 			// prints out the fields from the customer DB
 		}
+	}
+
+	public void ordrDel(int OID) throws SQLException {
+		String delete = "DELETE FROM orders WHERE OID = " + OID;
+		stmt.executeUpdate(delete);
 	}
 
 	public void ordrValue(int OID) throws SQLException {

@@ -52,11 +52,18 @@ public class OrderInput {
 					System.out.println("Order viewed successfully");
 					break;
 
+				case "4":
+					System.out.println("Enter the OID:");
+					int O_ID = Integer.parseInt(scan.nextLine());
+					db.prodDel(O_ID);
+					System.out.println("Order deleted");
+					break;
+
 				case "5": // requests the user to enter the OID of the product they want to calculate
-					System.out.println("Please enter the OID of the order you wish to calculate the totol for: ");
-					int O_ID = scan.nextInt();
+					System.out.println("Please enter the OID of the order you wish to calculate the total for: ");
+					int O_I_D = scan.nextInt();
 					scan.nextLine();
-					db.ordrValue(O_ID);
+					db.ordrValue(O_I_D);
 					System.out.println("Order calculated successfully");
 					break;
 

@@ -56,6 +56,13 @@ public class ProductInput {
 					System.out.println("Pet viewed successfully");
 					break;
 
+				case "4":
+					System.out.println("Enter the PID:");
+					int P_ID = Integer.parseInt(scan.nextLine());
+					db.prodDel(P_ID);
+					System.out.println("Pet deleted");
+					break;
+
 				default:
 					System.out.println("Input not recognised"); // If user inputs the wrong fields required, this
 					// message is displayed

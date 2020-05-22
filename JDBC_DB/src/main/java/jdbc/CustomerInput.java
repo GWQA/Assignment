@@ -48,8 +48,17 @@ public class CustomerInput {
 					break;
 
 				case "2": // Upon users request - prints the rows displayed in the customer DB
+
 					db.custRead();
 					System.out.println("Customer read successfully");
+					break;
+
+				case "4":
+
+					System.out.println("Enter the CID:");
+					int C_ID = Integer.parseInt(scan.nextLine());
+					db.custDel(C_ID);
+					System.out.println("Customer deleted");
 					break;
 
 				default:
